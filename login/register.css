@@ -74,6 +74,13 @@ label {
     border: none;
     border-radius: 25px;
     margin-top: 1rem; 
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: rgb(69, 69, 247);
 }
 
 a {
