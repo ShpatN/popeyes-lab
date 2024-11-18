@@ -16,9 +16,10 @@ a {
 }
 
 button {
-    background-color: #007BFF;
+    background-color: #333;
     color: white;
     border: none;
+    border-radius: 3px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
@@ -26,7 +27,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: black;
 }
 
 header {
@@ -61,11 +62,51 @@ header {
 .nav select {
     margin-left: 20px;
     padding: 5px;
+    color: white;
+    background-color: #333;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     padding: 40px 20px;
     background-color: white;
+}
+
+.fitness {
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 20px;  
+}
+
+.yoga {
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 20px;
+}
+
+.crossfit {
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 20px;
+}
+
+.spinning {
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 20px;
 }
 
 h1 {
@@ -84,11 +125,20 @@ p {
     line-height: 1.5;
 }
 
-footer {
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
     background-color: #333;
     color: white;
     padding: 40px 20px;
-    text-align: center;
+    text-align: left;
+}
+
+.about {
+    width: 30%;
 }
 
 footer h3 {
@@ -99,6 +149,11 @@ footer h3 {
 footer p, footer ul {
     margin-bottom: 10px;
     font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
 footer ul {
@@ -115,11 +170,9 @@ footer .social-icons img {
     cursor: pointer;
 }
 
-footer .footer-policies a {
+.footer-policies p {
     margin-right: 10px;
     color: white;
+    text-decoration: none;
 }
 
-footer .footer-policies a:hover {
-    color: #007BFF;
-}
