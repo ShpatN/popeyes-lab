@@ -15,21 +15,6 @@ a {
     text-decoration: none;
 }
 
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: black;
-}
-
 header {
     background-color: #333;
     color: white;
@@ -61,6 +46,7 @@ header {
     transition: background-color 0.3s ease;
 }
 
+
 .nav select {
     margin-left: 20px;
     padding: 5px;
@@ -71,60 +57,42 @@ header {
     cursor: pointer;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 40px 20px;
-    background-color: white;
-}
-
-.fitness {
-    width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 50px;
-    margin: 20px;  
-}
-
-.yoga {
-    width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 50px;
-    margin: 20px;
-}
-
-.crossfit {
-    width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 50px;
-    margin: 20px;
-}
-
-.spinning {
-    width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 50px;
-    margin: 20px;
-}
-
-h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-p {
-    margin-bottom: 30px;
+/* .second-nav a {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
     font-size: 16px;
-    line-height: 1.5;
+}
+
+.second-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: grey;
+    height: 50px;
+} */
+
+.second-nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+}
+
+.second-nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.second-nav a:hover {
+    background-color: #555;
 }
 
 .footer {
@@ -177,4 +145,3 @@ footer .social-icons img {
     color: white;
     text-decoration: none;
 }
-
