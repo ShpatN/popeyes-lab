@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(9, 75, 9);
     color: #333;
     line-height: 1.6;
 }
@@ -37,9 +37,16 @@ header {
     height: auto;
 }
 
-.navbar h1 {
+.title {
     flex-grow: 1;
     font-size: 24px;
+    color: white;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.title:hover {
+    color: rgb(9, 75, 9);
 }
 
 .nav a {
@@ -58,7 +65,7 @@ header {
 .gallery-photos h2 {
     margin-bottom: 30px;
     font-size: 32px;
-    color: #333;
+    color: white;
 }
 
 .Gallery {
@@ -87,7 +94,6 @@ header {
     font-size: 14px;
     color: #555;
 }
-
 
 .footer {
     display: flex;

@@ -10,7 +10,7 @@ html {
   
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(9, 75, 9);
     color: #333;
     line-height: 1.6;
 }
@@ -52,9 +52,16 @@ header {
     height: auto;
 }
 
-.navbar h1 {
+.title {
     flex-grow: 1;
     font-size: 24px;
+    color: white;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.title:hover {
+    color: rgb(9, 75, 9);
 }
 
 .nav a {
@@ -79,40 +86,59 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 40px 20px;
-    background-color: white;
+    margin-top: 0;
+}
+
+.image {
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+}
+
+.image img {
+    width: 100%; 
+    height: 400px; 
+    display: block;
 }
 
 .fitness {
     width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 50px;
     margin: 20px;  
+    background-color: white;
 }
 
 .yoga {
     width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 50px;
-    margin: 20px;
+    margin: 20px;  
+    background-color: white;
 }
 
 .crossfit {
     width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 50px;
-    margin: 20px;
+    margin: 20px;  
+    background-color: white;
 }
 
 .spinning {
     width: 40%;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 50px;
-    margin: 20px;
+    margin: 20px;  
+    background-color: white;
 }
 
 h1 {
