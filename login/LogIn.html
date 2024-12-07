@@ -24,12 +24,49 @@
 
             <a href="forgot-password.html" class="forgot-password">Forgot passowrd?</a>
 
-            <a href="../Main/Home.html">
-                <button type="button" class="login-button">LOGIN</button>
-            </a>
+            <button type="submit" class="login-button">LOGIN</button>
 
             <p class="register">Not a member yet? <a href="register.html">Register now</a></p>
         </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    
+            const loginForm = document.querySelector(".login-form");
+            loginForm.addEventListener("submit", function (event) {
+            event.preventDefault(); 
+
+            const loginEmail = document.getElementById("login-email").value.trim();
+            const loginPassword = document.getElementById("login-password").value.trim();
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const minNumberofChars = 6;
+            const maxNumberofChars = 16;
+            const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+            if (loginEmail === "" || loginPassword === "") {
+                alert("Email and password cannot be empty.");
+                return false;
+            }
+
+            if (!emailRegex.test(loginEmail)) {
+                alert("Invalid email address.");
+                return false;
+            }
+
+            if(loginPassword.length < minNumberofChars || loginPassword.length > maxNumberofChars){
+                alert("Password should contain between 6 and 16 characters");   
+                return false;
+            }
+            if(!passwordRegex.test(loginPassword)) {
+                alert("password should contain atleast one number and one special character");
+                return false;
+            }
+
+            window.location.href = "../Main/Home.html"; 
+            });
+        });
+    </script>
 </body>
 </html>
