@@ -156,63 +156,36 @@ p {
     margin-bottom: 15px;
 }
 
-.suplement-container {
-    display: flex; 
-    gap: 20px; 
-    padding: 20px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.suplement-item {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px; 
-    flex: 1;
-}
-
-.equipment-container {
-    display: flex;
-    gap: 20px; 
-    padding: 20px;
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
-}
-
-.equipment-item {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px; 
-    flex: 1; /* Makes all items the same size */
-}
-
-
+.suplement-container, 
+.equipment-container, 
 .gymwear-container {
     display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
     gap: 20px; 
     padding: 20px;
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
+    
 }
 
+.suplement-item, 
+.equipment-item, 
 .gymwear-item {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
+    margin-top: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px; 
-    flex: 1; /* Makes all items the same size */
+    height: 400px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
 }
+
 
 .footer {
     display: flex;

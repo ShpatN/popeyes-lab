@@ -17,11 +17,6 @@
                 <input type="text" id="name" placeholder="Name">
             </div>
 
-            <label for="surname">Surname</label>
-            <div class="input-group">
-                <input type="text" id="surname" placeholder="Surname">
-            </div>
-
             <label for="email">Email</label>
             <div class="input-group">
                 <input type="text" id="email" placeholder="Email">
@@ -55,37 +50,65 @@
                 event.preventDefault();
                 
                 const name = document.getElementById("name").value.trim();
-                const surname = document.getElementById("surname").value.trim();
                 const email = document.getElementById("email").value.trim();
                 const password = document.getElementById("password").value.trim();
-                const gender = document.getElementById("gender").value.trim();
                 const date = document.getElementById("date").value.trim();
 
-                const nameRegex = /^[a-zA-Z]{2,20}$/;
-                const surnameRegex = /^[a-zA-Z]{2,20}$/;
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 const minNumberofChars = 6;
                 const maxNumberofChars = 16;
                 const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
                 
                 if (name === "") {
-                    alert("Name cannot be empty");
-                    return false;
-                } else if (surname === "") {
-                    alert ("Surname cannot be empty");
-                    return false;
-                } else if (email === "") {
-                    alert ("Email cannot be empty");
-                    return false;
-                } else if (password === "") {
-                    alert ("Password cannot be empty");
-                    return false;
-                } else if (gender) {
-                    // check if gender is empty
-                } else if (date === "") {
-                    alert ("Date cannot be empty");
+                    alert("Name cannot be empty.");
                     return false;
                 }
+
+                if (email === "") {
+                    alert ("Email cannot be empty.");
+                    return false;
+                } 
+
+                if (password === "") {
+                    alert ("Password cannot be empty.");
+                    return false;
+                }  
+
+                const genderRadios = document.getElementsByName("gender");
+                let genderSelected = false;
+                for (const radio of genderRadios) {
+                    if (radio.checked) {
+                        genderSelected = true;
+                        break;
+                    }
+                }
+
+                if (!genderSelected) {
+                    alert("Gender cannot be empty.");
+                    return false;
+                }
+
+                if (date === "") {
+                    alert ("Date cannot be empty.");
+                    return false;
+                }
+
+                if (!emailRegex.test(email)) {
+                    alert("Invalid email address.");
+                    return false;
+                }
+
+                if(password.length < minNumberofChars || password.length > maxNumberofChars){
+                    alert("Password should contain between 6 and 16 characters.");   
+                    return false;
+                }
+
+                if(!passwordRegex.test(password)) {
+                    alert("Password should contain atleast one number and one special character.");
+                    return false;
+                }
+
+                window.location.href = "../Main/Home.html"; 
             });
         });
     </script>
