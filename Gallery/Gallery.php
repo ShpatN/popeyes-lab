@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: ../login/LogIn.php"); 
+        exit();
+    }
+
+    $username = $_SESSION['username'];
+    $role = $_SESSION['role'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +21,18 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="../Main/Home.html"><img src="../images/PopeyeSpinach.png" alt="logo" class="title"></a>
-            <a href="../Main/Home.html" class="title">Popeye's Lab</a>
+            <a href="../Main/Home.php"><img src="../images/PopeyeSpinach.png" alt="logo" class="title"></a>
+            <a href="../Main/Home.php" class="title">Popeye's Lab</a>
             <div class="nav">
-                <a href="../Main/Home.html">Home</a>
-                <a href="../Subscriptions/Subscriptions.html">Services</a>
-                <a href="../Stores/Store.html">Store</a>
-                <a href="../Location/Location.html">Locations</a>
-                <a href="../Gallery/Gallery.html">Gallery</a>
+                <a href="../Main/Home.php">Home</a>
+                <a href="../Subscriptions/Subscriptions.php">Services</a>
+                <a href="../Stores/Store.php">Store</a>
+                <a href="../Location/Location.php">Locations</a>
+                <a href="../Gallery/Gallery.php">Gallery</a>
                 <a href="#fund">About Us</a>
-                <a href="../login/LogIn.html">
-                    <button type="button" class="login-button">Login</button>
+                <a href="../login/logout.php">
+                    <button type="button" class="login-button"><?php echo "Logout ($username)"; ?></button>
+                </a>
             </div>
         </nav>
     </header>

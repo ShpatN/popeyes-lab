@@ -20,7 +20,7 @@
 
             <button type="submit" class="requestLink-button">Request reset link</button>
 
-            <p class="login">Back to <a href="LogIn.html">Login</a></p>
+            <p class="login">Back to <a href="LogIn.php">Login</a></p>
         </form>
     </div>
     <script>
@@ -45,7 +45,7 @@
                 }
 
                 alert("An email has been sent with the verification code");
-                window.location.href = "Login.html"; 
+                window.location.href = "Login.php"; 
             });
         });
     </script>
