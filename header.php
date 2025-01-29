@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar">
+        <a href="../Main/Home.php"><img src="../images/PopeyeSpinach.png" alt="logo" class="title"></a>
+        <a href="../Main/Home.php" class="title">Popeye's Lab</a>
+        <div class="nav">
+            <a href="../Main/Home.php">Home</a>
+            <a href="../Subscriptions/Subscriptions.php">Services</a>
+            <a href="../Stores/Store.php">Store</a>
+            <a href="../Location/Location.php">Locations</a>
+            <a href="../Gallery/Gallery.php">Gallery</a>
+            <a href="#fund">About Us</a>
+            <a href="../login/logout.php">
+                <button type="button" class="login-button"><?php echo "Logout ($username)"; ?></button>
+            </a>
+        </div>
+    </nav>
+</header>
