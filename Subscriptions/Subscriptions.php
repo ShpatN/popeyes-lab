@@ -7,12 +7,7 @@
     }
 
     $username = $_SESSION['username'];
-    $role = $_SESSION['role'];
-    if ($role !== 'admin') {
-        echo "Access Denied!";
-        exit();
-    }
-    
+    $role = $_SESSION['role'];    
 ?>
 
 <!DOCTYPE html>

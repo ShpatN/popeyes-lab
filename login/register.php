@@ -1,22 +1,37 @@
 <?php
-    include '../config.php'; 
+    session_start();
+    include '../config.php';
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
+        $name = trim($_POST['name']);
+        $email = trim($_POST['email']);
         $password = $_POST['password'];
+        $role = isset($_POST['role']) ? $_POST['role'] : 'user'; // Default role is "user"
 
+        // Validate input fields
+        if (empty($name) || empty($email) || empty($password)) {
+            echo "All fields are required!";
+            exit();
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "Invalid email format!";
+            exit();
+        }
+
+        // Password hashing
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Prepare SQL query to insert user into the database
-        $sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
+        // Insert user into the database
+        $sql = "INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $name, $email, $hashed_password);
+        $stmt->bind_param("ssss", $name, $email, $hashed_password, $role);
 
         if ($stmt->execute()) {
-            echo "<p>Registration successful!</p>";
+            header("Location: ../login/LogIn.php");
+            exit();
         } else {
-            echo "<p>Error: " . $stmt->error . "</p>";
+            echo "Error: " . $conn->error;
         }
     }
 ?>
@@ -60,7 +75,13 @@
             <div class="input-group">
                 <input type="date" name="birthday" id="date">
             </div>
-
+            
+            <label for="role">Register as:</label>
+            <select name="role" id="role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            
             <button type="submit" class="register-button">REGISTER</button>
 
             <p class="login">Already a member? <a href="LogIn.php">Login now</a></p>
