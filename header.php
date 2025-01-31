@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <header>
     <nav class="navbar">
         <a href="../Main/Home.php"><img src="../images/PopeyeSpinach.png" alt="logo" class="title"></a>
@@ -18,7 +14,7 @@ session_start();
             <a href="#fund">About Us</a>
             <a href="../login/logout.php">
                 <button type="button" class="login-button">
-                    <?php echo "Logout ($username $role)"; ?>
+                    <?php echo "Logout ($username \"$role\")"; ?>
                 </button>
             </a>
         </div>
