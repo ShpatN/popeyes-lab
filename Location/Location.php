@@ -22,6 +22,15 @@
     <?php 
         include '../header.php';
     ?>
+    <nav class="second-nav">
+        <a href="#prishtine">Prishtine</a>
+        <a href="#ferizaj">Ferizaj</a>
+        <a href="#gjilan">Gjilan</a>
+        <a href="#mitrovice">Mitrovice</a>
+        <a href="#peje">Peje</a>
+        <a href="#prizren">Prizren</a>
+        <a href="#gjakove">Gjakove</a>
+    </nav>
     <main>
         <div id="container">
             <div id="prishtine"> 

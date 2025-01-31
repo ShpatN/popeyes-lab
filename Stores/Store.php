@@ -22,6 +22,11 @@
     <?php
         include '../header.php';
     ?>
+    <nav class="second-nav">
+        <a href="#suplements">Supplements</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#gymwear">Gymwear</a>
+    </nav>
     <main>
         <h2 class="item-title">Suplements</h2>
         <div class="suplement-container" id="suplements">
