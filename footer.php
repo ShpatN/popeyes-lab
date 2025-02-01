@@ -21,6 +21,7 @@
                 <li><a href="">Phone: +383 (0) 44888999</a></li>
                 <li><a href="">Office: Str.Xhevdet Doda</a></li>
                 <li><a href="">Email: popeyeslab@ubt-uni.net</a></li>
+                <button><a href="../contact/contact.php">Contact us</a></button>
             </ul>
         </div>
         

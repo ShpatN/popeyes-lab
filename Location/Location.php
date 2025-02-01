@@ -22,69 +22,87 @@
     <?php 
         include '../header.php';
     ?>
-    <nav class="second-nav">
-        <a href="#prishtine">Prishtine</a>
-        <a href="#ferizaj">Ferizaj</a>
-        <a href="#gjilan">Gjilan</a>
-        <a href="#mitrovice">Mitrovice</a>
-        <a href="#peje">Peje</a>
-        <a href="#prizren">Prizren</a>
-        <a href="#gjakove">Gjakove</a>
-    </nav>
     <main>
-        <div id="container">
-            <div id="prishtine"> 
-                <img src="Prishtina01.png" alt="Prishtine">
-                <p>Location Prishtine: Str. Eqrem Çabej <a href="https://maps.app.goo.gl/zZ1ECeD1ytvCKndC8" >Open in Google Maps</a>
-                <br> Contact: +383 (0) 44888991
-                <br> Email: popeyespr@ubt-uni.net</p>
+        <h1>Our Locations</h1>
+        <div id="slider-container">
+            <div class="slider">
+                <div id="prishtine" class="slide"> 
+                    <img src="Prishtina01.png" alt="Prishtine">
+                    <p><b>PRISHTINE</b>: Str. Eqrem Çabej <a href="https://maps.app.goo.gl/zZ1ECeD1ytvCKndC8" >Open in Google Maps</a>
+                </div>
+                
+                <div id="ferizaj" class="slide"> 
+                    <img src="Ferizaj05.png" alt="Ferizaj">
+                    <p><b>FERIZAJ</b>: Str. Emin Duraku <a href="https://maps.app.goo.gl/YRK3DPaE6u2nBna5A" >Open in Google Maps</a>
+                </div>
+
+                <div id="gjilan" class="slide"> 
+                    <img src="Gjilani06.png" alt="Gjilan">
+                    <p><b>GJILAN</b>: Str. 15 Qershori <a href="https://maps.app.goo.gl/YcMfSD1GYUxNBEVT7" >Open in Google Maps</a>
+                </div>
+                
+                <div id="mitrovice" class="slide"> 
+                    <img src="Mitrovica02.png" alt="Mitrovica">
+                    <p><b>MITROVICE</b>: Str. Mbreteresha Teutë <a href="https://maps.app.goo.gl/QdieDRBVqDHePem18" >Open in Google Maps</a>
+                </div>
+
+                <div id="peje" class="slide"> 
+                    <img src="Peja03.png" alt="Peje">
+                    <p><b>PEJE</b>: Str. Bekim Berisha <a href="https://maps.app.goo.gl/hKxhRqWVMc9tqb9WA" >Open in Google Maps</a>
+                </div>
+
+                <div id="prizren" class="slide"> 
+                    <img src="Prizreni04.png" alt="Prizren">
+                    <p><b>PRIZREN</b>: Str. Tirana <a href="https://maps.app.goo.gl/c6f5MKP2fcLb35ns5" >Open in Google Maps</a>
+                </div>
+                
+                <div id="gjakove" class="slide"> 
+                    <img src="Gjakova07.png" alt="Gjakove">
+                    <p><b>GJAKOVE</b>: Str. Yjet e Erenikut <a href="https://maps.app.goo.gl/Lm5diWU9hugFJUot5" >Open in Google Maps</a>
+                </div>
             </div>
-            
-            <div id="ferizaj"> 
-                <img src="Ferizaj05.png" alt="Ferizaj">
-                <p>Location Ferizaj: Str. Emin Duraku <a href="https://maps.app.goo.gl/YRK3DPaE6u2nBna5A" >Open in Google Maps</a>
-                <br> Contact: +383 (0) 44888995
-                <br> Email: popeyesfr@ubt-uni.net</p>
-            </div>
-    
-            <div id="gjilan"> 
-                <img src="Gjilani06.png" alt="Gjilan">
-                <p>Location Gjilan: Str. 15 Qershori <a href="https://maps.app.goo.gl/YcMfSD1GYUxNBEVT7" >Open in Google Maps</a>
-                <br> Contact: +383 (0) 44888996
-                <br> Email: popeyesgl@ubt-uni.net</p>
-            </div>
-            
-            <div id="mitrovice"> 
-                <img src="Mitrovica02.png" alt="Mitorvice">
-                <p>Location Mitrovice: Str. Mbreteresha Teutë <a href="https://maps.app.goo.gl/QdieDRBVqDHePem18" >Open in Google Maps</a>
-                <br> Contact: +383 (0) 44888992
-                <br> Email: popeyesmt@ubt-uni.net</p>
-            </div>
-    
-            <div id="peje"> 
-                <img src="Peja03.png" alt="Peje">
-                <p>Location Peje: Str. Bekim Berisha <a href="https://maps.app.goo.gl/hKxhRqWVMc9tqb9WA" >Open in Google Maps</a>
-                <br> Contact: +383 (0) 44888993
-                <br> Email: popeyespj@ubt-uni.net</p>
-            </div>
-    
-            <div id="prizren"> 
-                <img src="Prizreni04.png" alt="Prizren">
-                <p>Location Prizren: Str. Tirana <a href="https://maps.app.goo.gl/c6f5MKP2fcLb35ns5" >Open in Google Maps</a>
-                <br> Contact: 0+383 (0) 44888994
-                <br> Email: popeyespz@ubt-uni.net</p>
-            </div>
-            
-            <div id="gjakove"> 
-                <img src="Gjakova07.png" alt="Gjakove">
-                <p>Location Gjakove: Str. Yjet e Erenikut <a href="https://maps.app.goo.gl/Lm5diWU9hugFJUot5" >Open in Google Maps</a>
-                <br> Contact: +383 (0) 44888997
-                <br> Email: popeyesgj@ubt-uni.net</p>
+            <div class="nav-buttons">
+                <button class="prev">Prev</button>
+                <button class="next">Next</button>
             </div>
         </div>
     </main>
+
     <?php 
         include '../footer.php';
     ?>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        setInterval(nextSlide, 5000);
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+
+        showSlide(currentSlide);
+    </script>
 </body>
 </html>
