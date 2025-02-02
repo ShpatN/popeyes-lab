@@ -34,15 +34,10 @@ button:hover {
   background-color: black;
 }
 
-.navbar button {
-  border: black solid;
-  border-radius: 5px;
-}
-
 header {
-  background-color: #333;
+  background-color: #222;
   color: white;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .navbar {
@@ -50,6 +45,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 .navbar img {
@@ -67,6 +63,11 @@ header {
 
 .title:hover {
   color: rgb(9, 75, 9);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .nav a {
@@ -87,29 +88,33 @@ header {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .nav {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .nav a,
+  .nav select {
+      margin: 10px 0;
+  }
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 40px 20px;
+  text-align: center;
 }
 
-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: black;
-}
-
-.container h1{
+.container h1 {
   margin: 20px;
   color: white;
 }
@@ -119,41 +124,39 @@ button:hover {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
-  margin: 20px; 
+  margin: 20px;
   min-width: 60%;
   background-color: white;
+  color: black;
 }
 
-.fitness {
-  padding-bottom: 20px;
+@media (max-width: 1024px) {
+  .subscription {
+      min-width: 80%;
+  }
 }
 
-.yoga {
-  padding-bottom: 20px;
-}
-
-.crossfit {
-  padding-bottom: 20px;
-}
-
-.spinning {
-  padding-bottom: 20px;
+@media (max-width: 768px) {
+  .subscription {
+      padding: 30px;
+  }
 }
 
 .footer {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
-  background-color: #333;
+  background-color: #222;
   color: white;
   padding: 40px 20px;
   text-align: left;
 }
 
 .about {
-  width: 30%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 footer h3 {
@@ -164,6 +167,7 @@ footer h3 {
 footer p, footer ul {
   margin-bottom: 10px;
   font-size: 14px;
+  color: white;
 }
 
 footer a {
@@ -179,14 +183,48 @@ footer ul li {
   margin-bottom: 5px;
 }
 
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 footer .social-icons img {
   width: 30px;
   margin: 10px;
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .about {
+      width: 30%;
+      text-align: left;
+  }
+
+  .footer {
+      justify-content: space-between;
+  }
+
+  .footer .social-icons {
+      justify-content: flex-start;
+  }
+}
+
+.footer-policies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .footer-policies p {
   margin-right: 10px;
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer-policies {
+      justify-content: flex-start;
+  }
 }

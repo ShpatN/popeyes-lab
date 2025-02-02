@@ -1,5 +1,5 @@
 <?php
-    include '../config.php'; // Make sure your database connection is set up here
+    include '../config.php'; 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = htmlspecialchars($_POST['name']);

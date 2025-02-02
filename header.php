@@ -7,7 +7,7 @@
                 <a href="../admin/dashboard.php">Admin Dashboard</a>
             <?php endif; ?>
             <a href="../Main/Home.php">Home</a>
-            <a href="../Subscriptions/Subscriptions.php">Services</a>
+            <a href="../Subscriptions/Subscriptions.php">Subscriptions</a>
             <a href="../Stores/Store.php">Store</a>
             <a href="../Location/Location.php">Locations</a>
             <a href="../Gallery/Gallery.php">Gallery</a>
